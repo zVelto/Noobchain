@@ -1,11 +1,11 @@
-import com.google.gson.GsonBuilder;
-
 import java.security.Security;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class NoobChain {
 
     public static ArrayList<Block> blockchain = new ArrayList<>();
+    public static HashMap<String, TransactionOutput> UTXOs = new HashMap<>(); //list of all unspent transaction
     public static int difficulty = 5;
     public static Wallet walletA;
     public static Wallet walletB;
