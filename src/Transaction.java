@@ -60,7 +60,7 @@ public class Transaction {
 
         //Check if transaction is valid:
         if (getInputsValue() < NoobChain.minimumTransaction) {
-            System.out.println("#Transaction Inputs to small: " + getInputValue());
+            System.out.println("#Transaction Inputs to small: " + getInputsValue());
             return false;
         }
 
@@ -92,7 +92,7 @@ public class Transaction {
     //returns sum of outputs:
     public float getOutputsValue() {
         float total = 0;
-        for (TransactionOutput o; outputs) {
+        for (TransactionOutput o: outputs) {
             total += o.value;
         }
         return total;
