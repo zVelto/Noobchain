@@ -54,6 +54,10 @@ public class StringUtil {
         return Base64.getEncoder().encodeToString(key.getEncoded());
     }
 
+    public static String getDificultyString(int difficulty) {
+        return new String(new char[difficulty]).replace('\0', '0');
+    }
+
     //Tacks in array of transaction and returns a merkle root.
     public static String getMerkleRoot(ArrayList<Transaction> transactions) {
         int count = transactions.size();
